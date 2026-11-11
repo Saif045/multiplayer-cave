@@ -52,11 +52,15 @@ project/assembly_name="GameFactory"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/plugin_updater/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg", "res://addons/netfox.internals/plugin.cfg", "res://addons/netfox/plugin.cfg", "res://addons/GodotGAS/plugin.cfg")
+enabled=PackedStringArray("res://addons/GodotGAS/plugin.cfg", "res://addons/blendot/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg", "res://addons/netfox.internals/plugin.cfg", "res://addons/netfox/plugin.cfg", "res://addons/plugin_updater/plugin.cfg")
 
-[steam]
+[godot_gas]
 
-initialization/processes/initialize_on_startup=false
+resources/attributes/draft_configuration_file="res://factory/starter/gameplay/gas/resources/attributes_draft.cfg"
+resources/attributes/output_directory="res://factory/starter/gameplay/gas/resources/attributes/"
+resources/cues/registry_file="res://factory/starter/gameplay/gas/resources/cue_registry.tres"
+resources/tags/registry_file="res://factory/starter/gameplay/gas/resources/tag_registry.tres"
+resources/tags/generated_script="res://factory/starter/gameplay/gas/resources/gameplay_tags.gd"
 
 [input]
 
@@ -200,11 +204,3 @@ rollback/full_state_interval=24
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-
-[godot_gas]
-
-resources/attributes/draft_configuration_file="res://factory/starter/gameplay/gas/resources/attributes_draft.cfg"
-resources/attributes/output_directory="res://factory/starter/gameplay/gas/resources/attributes/"
-resources/cues/registry_file="res://factory/starter/gameplay/gas/resources/cue_registry.tres"
-resources/tags/registry_file="res://factory/starter/gameplay/gas/resources/tag_registry.tres"
-resources/tags/generated_script="res://factory/starter/gameplay/gas/resources/gameplay_tags.gd"
