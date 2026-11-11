@@ -1,19 +1,13 @@
-# GameFactory
+# Multiplayer Cave
 
-A Godot co-op foundation with server-authoritative shared gameplay, Steam sessions
-and Netfox movement. Reusable mechanisms and the working reference experience
-are supplied under [factory/](factory/README.md).
+Multiplayer Cave is a cooperative underwater cave survival game for 1–4 players. Players explore handcrafted caves and work together to escape alive with limited breathing gas.
 
-- [Current state](factory/docs/current-state.md)
-- [Ownership and placement](factory/docs/ownership.md)
-- [Consuming GameFactory](factory/docs/consuming-gamefactory.md)
-- [v0.2 ownership migration](factory/docs/v0.2-ownership-migration.md)
-- [Agent routing](AGENTS.md)
+Open or import the root `project.godot` in **Godot 4.7.1 .NET** on Windows x64. Install a .NET SDK that can build the `net8.0` desktop target and the .NET 8 runtime. Run `dotnet build GameFactory.sln`, then press **F5** to open the main menu. If Netfox reports parse errors on the first scan of a fresh checkout, let the scan finish and reopen the project. Online sessions use development Steam App ID 480 and require a signed-in Steam client.
 
-Games own product code under `game/`; `addons/` and `third_party/` contain vendor
-material. Root project, solution and export settings are shared integration.
-The starter is a complete example, not a required player or gameplay model.
+The game-owned map is `game/levels/maps/cave.tscn`. The map starts empty for manual level authoring. The online shell is wired to the game scene and represents participants by session identity until Task 002 adds the diver.
 
-Build and test with `dotnet build GameFactory.sln` and `dotnet test GameFactory.sln`.
-Local validation tools live in `factory/tools/`; focused runtime probes live in
-`factory/sandbox/` and preserve evidence under `factory/artifacts/`.
+- [Game design](game/docs/game_design.md)
+- [Architecture](game/docs/architecture.md)
+- [Development plan](game/docs/development_plan.md)
+- [Task 001 verification](game/docs/task_001_report.md)
+- [GameFactory mechanism catalog](factory/README.md) and [consumer workflow](factory/docs/consuming-gamefactory.md)

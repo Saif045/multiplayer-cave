@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnva3on4ylwq6"]
+
+[ext_resource type="Script" path="res://game/shell/RoundParticipant.cs" id="1"]
+[ext_resource type="PackedScene" path="res://factory/networking/objects/network_object.tscn" id="2"]
+
+[node name="RoundParticipant" type="Node"]
+script = ExtResource("1")
+
+[node name="NetworkObject" parent="." instance=ExtResource("2")]
+SpawnGroup = 1
